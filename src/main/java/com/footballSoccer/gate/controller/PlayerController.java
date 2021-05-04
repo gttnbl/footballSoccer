@@ -28,4 +28,14 @@ public class PlayerController {
 
 	}
 
+	@RequestMapping(value = "/all", method = RequestMethod.GET, produces={"application/json"},headers = "Accept=application/json")
+	public List<Player> test() {
+
+		List<Player> players = playerService.getAllPlayers();
+
+		System.out.println(players);
+
+		return players;
+
+	}
 }
