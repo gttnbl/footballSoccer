@@ -27,7 +27,7 @@ public class PlayerController {
 		return players;
 
 	}
-//testtestefezrgfefzefgeregetgbgbnrfvbgebrebrtedffbrfgbrdfgbnhrfdgn
+//testtestefezrgfefzefgeregetgbgbnrfvbgebrebrtedffbrfgbrdfgbnhrfdgnsdvsvgdbv
 	@RequestMapping(value = "/all", method = RequestMethod.GET, produces={"application/json"},headers = "Accept=application/json")
 	public List<Player> test() {
 
