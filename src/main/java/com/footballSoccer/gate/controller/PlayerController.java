@@ -17,6 +17,8 @@ public class PlayerController {
 	@Autowired
 	PlayerService playerService;
 //testtestefezrgfefzefger
+
+//testtestefezrgfefzefger
 	@RequestMapping(value = "/all", method = RequestMethod.GET, produces={"application/json"},headers = "Accept=application/json")
 	public List<Player> gelAllPlayers() {
 
