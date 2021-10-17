@@ -6,7 +6,7 @@ pipeline{
       stage("build"){
          steps{
             echo 'This is a minimal pipeline.'
-			(maven : 'apache-maven-3.8.2') {
+			withMaven(maven : 'apache-maven-3.8.2') {
             bat'mvn clean install'
 			}
          }
