@@ -1,16 +1,11 @@
 pipeline{
    agent any
-   tools { 
-        maven 'M3'
-        
-    }
+  
     stages {
 	stage ('Initialize') {
             steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                ''' 
+                def mvnHome = tool 'M3'
+				 sh "${mvnHome}/bin/mvn -B -Dmaven.test.failure.ignore verify"
             }
         }
       stage("build"){
