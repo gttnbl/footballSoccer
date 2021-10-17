@@ -1,14 +1,12 @@
 pipeline{
    agent any
-  tools {
-        maven 'M3'
-    }
+  
     stages {
 
       stage("build"){
          steps{
             echo 'This is a minimal pipeline.'
-			sh 'mvn -B package'
+			mvn 'clean install -DskipTests'
          }
       }
 
