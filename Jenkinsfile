@@ -8,7 +8,7 @@ pipeline{
             echo 'This is a minimal pipeline.'
 		
 			withMaven(jdk: 'jdk1.8', maven: 'apache-maven-3.8.2') {
-            sh 'mvn clean install'
+            sh 'ls -l'
 			}
          }
       }
