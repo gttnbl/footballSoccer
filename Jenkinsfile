@@ -6,7 +6,8 @@ pipeline{
       stage("build"){
          steps{
             echo 'This is a minimal pipeline.'
-			mvn 'clean install -DskipTests'
+			withMaven(maven : 'apache-maven-3.6.1') {
+            bat'mvn clean compile'
          }
       }
 
