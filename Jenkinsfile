@@ -6,6 +6,7 @@ pipeline{
             echo 'building the app..'
 			sh 'make' 
             archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
+			
          }
       }
 
