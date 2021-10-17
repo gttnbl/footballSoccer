@@ -13,7 +13,7 @@ import com.footballSoccer.gate.service.PlayerService;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController(value = "/players")
 public class PlayerController {
-
+//autoCreate
 	@Autowired
 	PlayerService playerService;
 
