@@ -4,8 +4,9 @@ pipeline{
       stage("build"){
          steps{
             echo 'building the app..'
-			sh 'make' 
+			bat 'make' 
             archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
+			
          }
       }
 
